@@ -1,45 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {% load static %} {% block content%}
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
     <title>Customers Home Page</title>
 </head>
 
 <body>
-    <style>
-        table {
-            width: 100%;
-        }
-        
-        table,
-        th,
-        td {
-            border: 1px solid rgb(19, 0, 129);
-            border-collapse: collapse;
-        }
-        
-        th,
-        td {
-            padding: 15px;
-            text-align: left;
-            font-weight: bold;
-        }
-        
-        #headings {
-            background-color: rgb(19, 0, 129);
-            color: white;
-            font-size: 1.5em;
-        }
-    </style>
-    <nav>
-        <li><a href="{% url 'acc' %}">Customers</a></li>
-        <li>
-            <a href="{% url 'orders' %}">Orders</a></li>
-        <li>
-            <a href="{% url 'products' %}">Products</a></li>
-    </nav>
     <h1>Here lies all the customers</h1>
     <table style="width:50%">
         <tr id="headings">
@@ -56,6 +24,6 @@
         {% endfor %}
 
     </table>
-</body>
 
-</html>
+</body>
+{% endblock %}

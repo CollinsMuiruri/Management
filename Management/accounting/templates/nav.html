@@ -1,0 +1,19 @@
+{% block content%} {% load static %}
+
+<head>
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+</head>
+
+{% url 'acc' as acc %} {% url 'orders' as orders %} {% url 'products' as products %}
+
+<nav>
+    <label class="logo">Simona</label>
+    <ul>
+        <li><a {% if request.path == acc %}class="active" {% endif %} href="{{acc}}">Customers</a></li>
+        <li>
+            <a {% if request.path == orders %}class="active" {% endif %} href="{{orders}}">Orders</a></li>
+        <li>
+            <a {% if request.path == products %}class="active" {% endif %} href="{{products}}">Products</a></li>
+    </ul>
+</nav>
+{% endblock %}

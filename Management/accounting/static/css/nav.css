@@ -1,0 +1,39 @@
+nav {
+    background-color: rgb(19, 0, 129);
+    height: 50px;
+}
+
+nav label.logo {
+    font-weight: 900;
+    color: white;
+    border: green;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li {
+    margin-left: 10px;
+    display: inline;
+    list-style: none;
+    font-size: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 50px;
+    padding: 7px 10px;
+    color: white;
+}
+
+a.active,
+a:hover {
+    border-radius: 2px;
+    background: rgb(10, 102, 206);
+    transition: .5s;
+}
